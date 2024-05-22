@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Popup Message -->
+<div id="popup-message"></div>
+
+    <div class="container">
+        <h2>Product Management</h2>
+        <div class="form-container">
+            <form id="product-form" enctype="multipart/form-data">
+                <input type="text" id="name" placeholder="Product Name" required>
+                <input type="number" id="price" placeholder="Price" required>
+                <textarea id="description" placeholder="Description"></textarea>
+                <input type="file" id="image" accept="image/*" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+        <div id="products-list">
+        </div>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div id="edit-product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Product</h2>
+            <form id="edit-product-form">
+                <input type="hidden" id="edit-product-id">
+                <input type="text" id="edit-name" placeholder="Product Name" required>
+                <input type="number" id="edit-price" placeholder="Price" required>
+                <textarea id="edit-description" placeholder="Description"></textarea>
+                <button type="submit" id="edit-btn">Update Product</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-product-img-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Product Image</h2>
+            <form id="edit-image-form" enctype="multipart/form-data">
+                <input type="hidden" id="edit-product-img-id">
+                <input type="file" id="edit-image" accept="image/*">
+                <button type="submit" id="update-image-btn">Update Image</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
